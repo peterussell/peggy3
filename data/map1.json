@@ -1,0 +1,49 @@
+{
+  "locations": [
+    {
+      "id": "room1",
+      "name": "Room One",
+      "description": "The first room.",
+      "north": "room2",
+      "east": "room3",
+      "south": "room4",
+      "west": "room5"
+    },
+    {
+      "id": "room2",
+      "name": "Room Two",
+      "description": "The second room.",
+      "north": null,
+      "east": null,
+      "south": "room1",
+      "west": null
+    },
+    {
+      "id": "room3",
+      "name": "Room Three",
+      "description": "The third room.",
+      "north": null,
+      "east": null,
+      "south": null,
+      "west": "room1"
+    },
+    {
+      "id": "room4",
+      "name": "Room Four",
+      "description": "The fourth room.",
+      "north": "room1",
+      "east": null,
+      "south": null,
+      "west": null
+    },
+    {
+      "id": "room5",
+      "name": "Room Five",
+      "description": "The fifth room.",
+      "north": null,
+      "east": "room1",
+      "south": null,
+      "west": null
+    }
+  ]
+}
