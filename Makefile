@@ -8,3 +8,6 @@ peggy: $(SRC)/main.o
 
 peggy.o: $(SRC)/main.cpp
 	$(CC) $(CFLAGS) $(SRC)/main.cpp -o $(SRC)/main.o
+
+clean:
+	rm -rf $(SRC)/*.o
