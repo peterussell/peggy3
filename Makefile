@@ -1,17 +1,19 @@
 CC = g++
 CFLAGS = -c -g
-BIN = ./bin
-SRC = ./src
-INC = ./include
+BIN = ./peg
+SRC = $(shell find src -name *.cpp)
+OBJ = $(SRC:.cpp=.o)
 
-peggy: $(SRC)/main.o includes.o
-	$(CC) $(SRC)/main.o $(INC)/includes.o -o peggy
+all: $(BIN)
 
-peggy.o: $(SRC)/main.cpp
-	$(CC) $(CFLAGS) $(SRC)/main.cpp -o $(SRC)/main.o
+$(BIN): $(OBJ)
+	$(CC) $(OBJ) -o $@
 
-includes.o: $(INC)/jsoncpp.cpp
-	$(CC) $(CFLAGS) $(INC)/jsoncpp.cpp -o $(INC)/includes.o
+%.o: %.cpp
+	$(CC) $(CFLAGS) -o $@ $< 
 
 clean:
-	rm -rf $(SRC)/*.o
+	rm -rf $(OBJ) $(BIN)
+
+vg:
+	valgrind --dsymutil=yes $(BIN)
