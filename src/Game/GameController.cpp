@@ -6,14 +6,15 @@
 using namespace std;
 
 GameController::GameController() {
-  cout << "GameController initialized" << endl;
+  // GameController initialization
 }
 
 GameController::~GameController() {
-  cout << "GameController destroyed" << endl;
+  // GameController destruction
 }
 
 int GameController::run() {
-  cout << "Hello from GameController::run()!" << endl;
+  theWorld = World();
+  theWorld.loadMap("../data/peggy1.map");
   return 0;
 }
