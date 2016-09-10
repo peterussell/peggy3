@@ -1,5 +1,5 @@
-CC = g++
-CFLAGS = -c -g
+CC = clang++
+CFLAGS = -c -g -std=c++11 -stdlib=libc++
 BIN = ./peg
 SRC = $(shell find src -name *.cpp)
 INC = $(shell find include -name *.cpp)
