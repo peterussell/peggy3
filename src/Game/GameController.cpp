@@ -15,6 +15,6 @@ GameController::~GameController() {
 
 int GameController::run() {
   theWorld = World();
-  theWorld.loadMap("../data/peggy1.map");
+  theWorld.loadMap("data/maps/peggy-world.json");
   return 0;
 }
